@@ -49,7 +49,11 @@ class AuthController implements RequestHandlerInterface
                 $this->settings->get('flarum-pusher.app_secret'),
                 $this->settings->get('flarum-pusher.app_id'),
                 // @phpstan-ignore-next-line
-                ['cluster' => $this->settings->get('flarum-pusher.app_cluster')]
+                [
+                    'cluster' => $this->settings->get('flarum-pusher.app_cluster'),
+                    'host' => $this->settings->get('flarum-pusher.ws_host'),
+                    'port' => $this->settings->get('flarum-pusher.ws_port'),
+                ]
             );
 
             $payload = json_decode($pusher->socket_auth($userChannel, Arr::get($body, 'socket_id')), true);

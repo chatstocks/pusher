@@ -5,6 +5,22 @@ app.initializers.add('flarum-pusher', () => {
     .for('flarum-pusher')
     .registerSetting(
       {
+        setting: 'flarum-pusher.ws_host',
+        label: app.translator.trans('flarum-pusher.admin.pusher_settings.ws_host_label'),
+        type: 'text',
+      },
+      30
+    )
+    .registerSetting(
+      {
+        setting: 'flarum-pusher.ws_port',
+        label: app.translator.trans('flarum-pusher.admin.pusher_settings.ws_port_label'),
+        type: 'text',
+      },
+      30
+    )
+    .registerSetting(
+      {
         setting: 'flarum-pusher.app_id',
         label: app.translator.trans('flarum-pusher.admin.pusher_settings.app_id_label'),
         type: 'text',

@@ -13,6 +13,8 @@ flarum-pusher:
       app_id_label: App ID
       app_key_label: App Key
       app_secret_label: App Secret
+      ws_host_label: Ws Host
+      ws_port_label: Ws Port
       title: Pusher Settings
 
   # Translations in this namespace are used by the admin interface.
