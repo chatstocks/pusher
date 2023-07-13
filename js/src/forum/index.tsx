@@ -28,6 +28,8 @@ app.initializers.add('flarum-pusher', () => {
       cluster: app.forum.attribute('pusherCluster'),
       wsHost: app.forum.attribute('pusherWsHost'),
       wsPort: app.forum.attribute('pusherWsPort'),
+      enabledTransports: ['ws', 'wss'],
+      forceTLS: false,
       auth: {
         headers: {
           'X-CSRF-Token': app.session.csrfToken,
